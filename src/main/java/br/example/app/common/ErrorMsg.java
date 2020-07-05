@@ -1,0 +1,41 @@
+package br.example.app.common;
+
+public class ErrorMsg {
+
+    private String msg;
+    private String status;
+    private String detailt;
+    private int code;
+
+    public ErrorMsg(String status, String msg, String detail, int code) {
+        this.status=status;
+        this.msg = msg;
+        this.detailt = detailt;
+        this.code = code;
+    }
+
+   public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getDetailt() {
+        return detailt;
+    }
+
+    public void setDetailt(String detailt) {
+        this.detailt = detailt;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+}
