@@ -16,20 +16,20 @@ public class Customer {
     private Date dateOfBirth;
 
     @OneToOne(cascade = {CascadeType.ALL})
-    private Adress adress;
+    private Address address;
 
     public Customer() {
     }
 
-    public Customer(Long Id, String name, String cpf, Date dateOfBirth, Adress adress) {
+    public Customer(Long Id, String name, String cpf, Date dateOfBirth, Address address) {
         this.Id = Id;
         this.name = name;
         this.cpf = cpf;
         this.dateOfBirth = dateOfBirth;
-        this.adress = adress;
+        this.address = address;
     }
 
-    public Customer(String jose, String s, Date date, Adress adress) {
+    public Customer(String jose, String s, Date date, Address address) {
     }
 
     public Long getId() {
@@ -41,7 +41,7 @@ public class Customer {
         name = builder.name;
         cpf = builder.cpf;
         dateOfBirth = builder.dateOfBirth;
-        adress = builder.adress;
+        address = builder.address;
     }
 
     public void setId(long id) {
@@ -72,12 +72,12 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Adress getAdress() {
-        return adress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(Adress adress) {
-        this.adress = adress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public static Builder customerBuilder() {
@@ -90,7 +90,7 @@ public class Customer {
         private String name;
         private String cpf;
         private Date dateOfBirth;
-        private Adress adress;
+        private Address address;
 
         private Builder() {
         }
@@ -115,8 +115,8 @@ public class Customer {
             return this;
         }
 
-        public Builder adress(Adress val) {
-            adress = val;
+        public Builder adress(Address val) {
+            address = val;
             return this;
         }
 

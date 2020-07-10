@@ -1,23 +1,22 @@
 package br.example.app.customer.dto;
 
-import br.example.app.customer.domain.Adress;
+import br.example.app.customer.domain.Address;
 import java.util.Date;
 
 public class CustomerDTOOut {
-
 
     private Long id;
     private String name;
     private String cpf;
     private Date dateOfBirth;
-    private Adress adress;
+    private Address address;
 
-    public CustomerDTOOut(Long id, String name, String cpf, Date dateOfBirth, Adress adress) {
+    public CustomerDTOOut(Long id, String name, String cpf, Date dateOfBirth, Address address) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.dateOfBirth = dateOfBirth;
-        this.adress = adress;
+        this.address = address;
     }
 
     public Long getId() {
@@ -52,11 +51,11 @@ public class CustomerDTOOut {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Adress getAdress() {
-        return adress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(Adress adress) {
-        this.adress = adress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

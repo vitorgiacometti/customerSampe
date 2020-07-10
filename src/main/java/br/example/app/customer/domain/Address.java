@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-public class Adress {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,10 +16,10 @@ public class Adress {
     private int numberHome;
     private String City;
 
-    public Adress() {
+    public Address() {
     }
 
-    public Adress(String street, int numberHome, String city) {
+    public Address(String street, int numberHome, String city) {
         this.street = street;
         this.numberHome = numberHome;
         this.City = city;

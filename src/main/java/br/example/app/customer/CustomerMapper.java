@@ -10,7 +10,7 @@ import java.util.List;
 public class CustomerMapper {
 
     public static CustomerDTOOut convertToDtoOut(Customer customer) {
-        return new CustomerDTOOut(customer.getId(), customer.getName(), customer.getCpf(), customer.getDateOfBirth(), customer.getAdress());
+        return new CustomerDTOOut(customer.getId(), customer.getName(), customer.getCpf(), customer.getDateOfBirth(), customer.getAddress());
     }
 
     public static Customer convertToEntity(CustomerDTOIn customerDTOIn){
@@ -18,7 +18,7 @@ public class CustomerMapper {
                 .name(customerDTOIn.getName())
                 .cpf(customerDTOIn.getCpf())
                 .dateOfBirth(customerDTOIn.getDateOfBirth())
-                .adress(customerDTOIn.getAdress())
+                .adress(customerDTOIn.getAddress())
                 .build();
     }
 

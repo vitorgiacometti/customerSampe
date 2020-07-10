@@ -19,8 +19,11 @@ import java.util.function.Predicate;
 @Service
 public class CustomerService {
 
-    @Autowired
     private CustomerRepository customerRepository;
+
+    public CustomerService(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
 
     private Predicate<String> StringValidPredicate = e -> e != null && e.length() !=0;
 
@@ -41,7 +44,7 @@ public class CustomerService {
                     customer.setName(customerUpdate.getName());
                     customer.setCpf(customerUpdate.getCpf());
                     customer.setDateOfBirth(customerUpdate.getDateOfBirth());
-                    customer.setAdress(customerUpdate.getAdress());
+                    customer.setAddress(customerUpdate.getAddress());
                     return customerRepository.saveAndFlush(customer);
                 })
                 .orElseGet(() -> {

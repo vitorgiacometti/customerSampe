@@ -1,7 +1,7 @@
 package br.example.app.customer;
 
 import br.example.app.CustomerApplication;
-import br.example.app.customer.domain.Adress;
+import br.example.app.customer.domain.Address;
 import br.example.app.customer.domain.Customer;
 import br.example.app.customer.dto.CustomerDTOIn;
 import org.junit.Before;
@@ -52,9 +52,9 @@ public class CustomerTest {
 
         return "{\n" +
                 "  \"adress\": {\n" +
-                "    \"city\": \"" + customer.getAdress().getCity()+ "\",\n" +
-                "    \"numberHome\": "+ customer.getAdress().getNumberHome()+",\n" +
-                "    \"street\": \"" + customer.getAdress().getStreet()+"\"\n" +
+                "    \"city\": \"" + customer.getAddress().getCity()+ "\",\n" +
+                "    \"numberHome\": "+ customer.getAddress().getNumberHome()+",\n" +
+                "    \"street\": \"" + customer.getAddress().getStreet()+"\"\n" +
                 "  },\n" +
                 "  \"cpf\": \""+customer.getCpf()+"\",\n" +
                 "  \"dateOfBirth\": \""+ sdf.format(customer.getDateOfBirth())+"\",\n" +
@@ -67,12 +67,12 @@ public class CustomerTest {
         this.mockMvc = webAppContextSetup(webApplicationContext).build();
         this.customerRepository.deleteAllInBatch();
         this.caseCustomerDTO = new CustomerDTOIn("Ramon", "21121345", new Date(),
-                new Adress("Andrade neves", 25, "Campinas"));
+                new Address("Andrade neves", 25, "Campinas"));
         this.caseCustomer = Customer.customerBuilder()
                 .name("Jose")
                 .cpf("21212121345")
                 .dateOfBirth(new Date())
-                .adress(new Adress("Andrade neves", 26, "São Paulo"))
+                .adress(new Address("Andrade neves", 26, "São Paulo"))
                 .build();
     }
 

@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 
-
-
 @RestController
 @RequestMapping("/v1/customer")
 @Transactional
@@ -64,9 +62,7 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public ResponseEntity updateCustomer(@PathVariable final Long id, @RequestBody CustomerDTOIn customerDtoIn){
         Customer customerUpdate = customerService.update(id, CustomerMapper.convertToEntity(customerDtoIn));
-        return new ResponseEntity(customerUpdate, HttpStatus.OK);
+        return new ResponseEntity(CustomerMapper.convertToDtoOut(customerUpdate), HttpStatus.OK);
     }
-
-
 
 }

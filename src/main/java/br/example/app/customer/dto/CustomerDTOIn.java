@@ -1,6 +1,6 @@
 package br.example.app.customer.dto;
 
-import br.example.app.customer.domain.Adress;
+import br.example.app.customer.domain.Address;
 
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
@@ -14,13 +14,13 @@ public class CustomerDTOIn {
 
     @Past
     private Date dateOfBirth;
-    private Adress adress;
+    private Address address;
 
-    public CustomerDTOIn(String name, String cpf, Date dateOfBirth, Adress adress) {
+    public CustomerDTOIn(String name, String cpf, Date dateOfBirth, Address address) {
         this.name = name;
         this.cpf = cpf;
         this.dateOfBirth = dateOfBirth;
-        this.adress = adress;
+        this.address = address;
     }
 
     public String getName() {
@@ -47,11 +47,11 @@ public class CustomerDTOIn {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Adress getAdress() {
-        return adress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(Adress adress) {
-        this.adress = adress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
