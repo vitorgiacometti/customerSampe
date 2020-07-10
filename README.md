@@ -1,9 +1,8 @@
-Simple CRUD Customer in Spring é using DB PostgreSQL.
-
+Customer simple "CRUD" in Spring using DB PostgreSQL.
 
 ## About project
 
-This project is an example of using some concepts  Spring Boot:
+This project is an example of using some concepts Spring Boot:
 - Domain Drive Design - DDD
 - TDD
 - Controller Advice
@@ -13,6 +12,7 @@ This project is an example of using some concepts  Spring Boot:
 - Default Error Msg 
 - Get Paged
 - Builder Pattern
+- Deploy in Docker
 - PostMan Collection [tool](/tools/PostManCollection/)   
 
 ## For start project
