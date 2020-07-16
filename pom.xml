@@ -65,6 +65,7 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>package</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -73,6 +74,7 @@
 					<mainClass>br.example.app.CustomerApplication</mainClass>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 

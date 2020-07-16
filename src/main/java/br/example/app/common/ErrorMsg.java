@@ -4,13 +4,13 @@ public class ErrorMsg {
 
     private String msg;
     private String status;
-    private String detailt;
+    private String detail;
     private int code;
 
     public ErrorMsg(String status, String msg, String detail, int code) {
         this.status=status;
         this.msg = msg;
-        this.detailt = detailt;
+        this.detail = detail;
         this.code = code;
     }
 
@@ -22,12 +22,12 @@ public class ErrorMsg {
         this.msg = msg;
     }
 
-    public String getDetailt() {
-        return detailt;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDetailt(String detailt) {
-        this.detailt = detailt;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     public int getCode() {

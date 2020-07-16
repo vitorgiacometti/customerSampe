@@ -1,14 +1,12 @@
 package br.example.app.customer.validator;
 
 import br.example.app.customer.CustomerRepository;
-import br.example.app.customer.domain.Customer;
 import br.example.app.customer.dto.CustomerDTOIn;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import java.util.List;
 import java.util.function.Predicate;
 
 @Component
@@ -32,7 +30,6 @@ public class CustomerValidator implements Validator {
     public void validate(Object target, Errors errors) {
         CustomerDTOIn customer = (CustomerDTOIn) target;
 
-        List<Customer> customers = customerRepository.findByName(customer.getName());
 
         if (customerRepository.findByName(customer.getName()).stream().count() > 0) {
             errors.rejectValue("name", "not found");

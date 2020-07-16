@@ -4,7 +4,6 @@ package br.example.app.customer;
 import br.example.app.customer.domain.Customer;
 import br.example.app.customer.dto.CustomerDTOOut;
 import br.example.app.customer.exception.CustomException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -35,7 +34,7 @@ public class CustomerService {
         }else {
             customerPage = customerRepository.findAll(pageRequest);
         }
-        return new PageImpl<CustomerDTOOut>(CustomerMapper.convertToListDto(customerPage.getContent()), pageRequest, customerPage.getTotalElements());
+        return new PageImpl<>(CustomerMapper.convertToListDto(customerPage.getContent()), pageRequest, customerPage.getTotalElements());
     }
 
     public Customer update(Long id, Customer customerUpdate){

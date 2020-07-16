@@ -14,7 +14,7 @@ public class Address {
 
     private String street;
     private int numberHome;
-    private String City;
+    private String city;
 
     public Address() {
     }
@@ -22,7 +22,7 @@ public class Address {
     public Address(String street, int numberHome, String city) {
         this.street = street;
         this.numberHome = numberHome;
-        this.City = city;
+        this.city = city;
     }
 
     public String getStreet() {
@@ -42,11 +42,11 @@ public class Address {
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public void setCity(String city) {
-        City = city;
+        this.city = city;
     }
 
 }

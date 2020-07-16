@@ -11,6 +11,9 @@ public class CustomerFilter {
 
     static java.util.function.Predicate<String> validatorString = e -> e != null && e.length() !=0;
 
+    private CustomerFilter() {
+    }
+
     public static Specification<Customer> getSpecification(Customer customer){
 
         return (root, criteriaQuery, criteriaBuilder) -> {

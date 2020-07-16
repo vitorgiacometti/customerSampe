@@ -13,6 +13,9 @@ public class CustomerMapper {
         return new CustomerDTOOut(customer.getId(), customer.getName(), customer.getCpf(), customer.getDateOfBirth(), customer.getAddress());
     }
 
+    private CustomerMapper() {
+    }
+
     public static Customer convertToEntity(CustomerDTOIn customerDTOIn){
         return Customer.customerBuilder()
                 .name(customerDTOIn.getName())
